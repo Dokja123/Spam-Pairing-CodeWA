@@ -92,14 +92,14 @@ async function startspam() {
     console.log(chalk.bgBlack(chalk.blueBright("║  ╠═╣╚═╗╚═╗╠═╣╚═╗ ║ ║╣ ╠╦╝")));
     console.log(chalk.bgBlack(chalk.redBright("╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝ ╩ ╚═╝╩╚═")));
     
-    let phoneNumber = await question(chalk.bgBlack(chalk.whiteBright("Input NO Whatsapp: +628xxx : ")));
+    let phoneNumber = await question(chalk.bgBlack(chalk.whiteBright("Input NO Whatsapp: +225xxx : ")));
     phoneNumber = phoneNumber.replace(/[^0-9]/g, '');
     
     while (!Object.keys(PHONENUMBER_MCC).some(v => phoneNumber.startsWith(v))) {
       console.log(chalk.bgBlack(chalk.yellowBright("╔═╗╔═╗╔═╗╔═╗╔═╗╔═╗╔╦╗╔═╗╦═╗")));
       console.log(chalk.bgBlack(chalk.blueBright("║  ╠═╣╚═╗╚═╗╠═╣╚═╗ ║ ║╣ ╠╦╝")));
       console.log(chalk.bgBlack(chalk.redBright("╚═╝╩ ╩╚═╝╚═╝╩ ╩╚═╝ ╩ ╚═╝╩╚═")));
-      phoneNumber = await question(chalk.bgBlack(chalk.greenBright("Input NO Whatsapp: +628xxx : ")));
+      phoneNumber = await question(chalk.bgBlack(chalk.greenBright("Input NO Whatsapp: +225xxx : ")));
     }
     
     let spamCount = parseInt(await question(chalk.bgBlack(chalk.whiteBright("Berapa kali kamu akan spam? : "))), 10);
